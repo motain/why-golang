@@ -1,0 +1,130 @@
+Golang at THE Football App
+A short intro of why and how we use it
+14 Mar 2014
+
+Dirk Pahl
+Software Architect, motain GmbH
+dirk.pahl@motain.de
+http://github.com/dirkaholic
+@dirkaholic
+
+* Who am I?
+
+My name is Dirk.
+
+* THE Football App
+
+.image why-golang/tfa.png 80 306
+.image why-golang/tfa_large.jpg 370 800
+
+* THE Football App
+
+- founded in 2008
+- 45 employees (and growing)
+- #1 football app with more than 13 million downloads
+- various platforms Android, iOS, Windows Phone, Asha, Samsung Smart TVs
+- covering 100+ leagues in 9 different languages (more to come)
+- features: live ticker, push notifications, statistics, news, videos, fan zone, match prediction
+
+* Current problems
+
+- deliver 150+ feeds in 9 languages each (more than 1000 feeds in total)
+- 100+ incoming feeds to be processed as fast as possible
+- more languages & competitions coming up
+
+* Old stack
+
+- plain PHP
+- Symfony2
+- dedicated servers
+- no parallel incoming feed processing
+
+* Go programming language
+
+.image why-golang/mini-gopher.png 550 550
+
+* Go programming language
+
+_Go_is_an_open_source_programming_language_that_makes_it_easy_to_build_simple,_reliable,_and_efficient_software._
+
+That is entirely *true*.
+
+Go enables us to achieve much better results in less time with less resources needed.
+
+Code quality increased and time needed to test code decreased by an order of magnitude.
+
+It runs *fast*, *very*very*FAST*.
+
+* Go programming language - The WHY
+
+It runs almost as fast as C++
+
+It's statically typed but feels like a dynamic one
+
+Compiles in a couple of seconds
+
+100+ tests hitting database run all in under 5 seconds
+
+Costs less than other languages - both for infrastructure and maintenance
+
+It's cool
+
+* Go Programming language - The HOW
+
+Active deployments:
+
+- *seraph* -> _client_like_ monitoring tool
+
+- *logalyzer* -> CloudFront log parser
+
+- *FTP*receiver* -> convert incoming FTP files to RabbitMQ messages
+
+- *EROS* -> high performance call cache
+
+- various other internal apps
+
+In progress:
+
+- upcoming version of our backend
+
+* Packages we use
+
+- gorilla / mux
+- martini
+- gorp
+- gocheck
+
+* seraph
+
+* logalyzer
+
+* FTP Receiver
+
+* EROS
+
+* Deployment
+
+* Credits
+
+The Go Gopher logo [[http://golang.org/doc/faq#Whats_the_origin_of_the_mascot][golang.org / Whats the origin of the mascot]]
+
+* Links
+
+THE Football App
+
+.link http://www.thefootballapp.com
+
+Go programming language
+
+.link http://golang.org
+
+* We are hiring
+
+- DevOps Engineer
+- Backend Software Developer
+- Frontend Developer
+- Android Senior Developer
+
+For more details visit our page:
+
+.link http://www.thefootballapp.com/jobs
