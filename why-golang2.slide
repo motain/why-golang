@@ -12,6 +12,10 @@ http://github.com/dirkaholic
 
 My name is Dirk.
 
+I professionally produce code out of coffee since 2001.
+
+I work as Software Architect in the backend team of motain GmbH.
+
 * THE Football App
 
 .image why-golang/tfa.png 80 306
@@ -26,7 +30,7 @@ My name is Dirk.
 - covering 100+ leagues in 9 different languages (more to come)
 - features: live ticker, push notifications, statistics, news, videos, fan zone, match prediction
 
-* Current problems
+* Current challenges
 
 - deliver 150+ feeds in 9 languages each (more than 1000 feeds in total)
 - 100+ incoming feeds to be processed as fast as possible
@@ -37,7 +41,7 @@ My name is Dirk.
 - plain PHP
 - Symfony2
 - dedicated servers
-- no parallel incoming feed processing
+- sequential incoming feed processing
 
 * Go programming language
 
@@ -96,13 +100,30 @@ In progress:
 
 * seraph
 
+- check our produced feeds in real time
+- find corrupted data
+- send alerts
+
 * logalyzer
+
+- parse the tons of Cloudfront logs we produce every day
+- evaluate our logs statistically
+-
 
 * FTP Receiver
 
+- reads files coming in via FTP server using inotify
+- publishes a message containing the file contents in AMQP
+- replaces a bunch of cron jobs that started PHP scripts
+
 * EROS
 
+- Entity Repository On Steroids
+
 * Deployment
+
+- Compile binaries after running tests in Jenkins
+- During deployment the latest binary is fetched from there
 
 * Credits
 
