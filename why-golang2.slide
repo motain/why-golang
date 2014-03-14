@@ -4,6 +4,7 @@ A short intro of why and how we use it
 
 Dirk Pahl
 Software Architect, motain GmbH
+
 dirk.pahl@motain.de
 http://github.com/dirkaholic
 @dirkaholic
@@ -38,8 +39,13 @@ I work as Software Architect in the backend team of motain GmbH.
 
 * Old stack
 
+.image why-golang/Old-Guy-Smoking-Cigar.jpg 512 384
+
+* Old stack
+
 - plain PHP
 - Symfony2
+- cron jobs
 - dedicated servers
 - sequential incoming feed processing
 
@@ -89,7 +95,7 @@ Active deployments:
 
 In progress:
 
-- upcoming version of our backend
+- upcoming version of our scores backend
 
 * Packages we use
 
@@ -101,14 +107,16 @@ In progress:
 * seraph
 
 - check our produced feeds in real time
-- find corrupted data
-- send alerts
+- find corrupted / missing data
+- do some logical checks
+- send alerts to various channels
 
 * logalyzer
 
 - parse the tons of Cloudfront logs we produce every day
 - evaluate our logs statistically
--
+- informs us about some unusual usage patterns
+- replaces a log analyzing system that would cost us several thousands of dollars per month
 
 * FTP Receiver
 
@@ -119,15 +127,30 @@ In progress:
 * EROS
 
 - Entity Repository On Steroids
+- internal service in our service oriented architecture
+- caches a minimum representation of objects from other services
+- keeps services independent from each other
+- uses groupcache and martini
+
+* Upcoming version of our scores backend
+
+- replaces parts of our plain PHP application one after the other
+- reads incoming feeds from AMQP
+- parses the feeds and persists the data to our database
+- uses gorp
+- later it's planned to serve the data to our apps
+- runs on AWS
 
 * Deployment
 
-- Compile binaries after running tests in Jenkins
-- During deployment the latest binary is fetched from there
+- we develop locally in virtual machines
+- compile binaries after running tests in Jenkins on every commit
+- during deployment the latest binary is fetched from there
 
 * Credits
 
-The Go Gopher logo [[http://golang.org/doc/faq#Whats_the_origin_of_the_mascot][golang.org / Whats the origin of the mascot]]
+- The Go Gopher logo [[http://golang.org/doc/faq#Whats_the_origin_of_the_mascot][golang.org / Whats the origin of the mascot]]
+- The old guy [[http://quittea.com/wp-content/uploads/2012/06/Old-Guy-Smoking-Cigar.jpg][quittea.com]]
 
 * Links
 
