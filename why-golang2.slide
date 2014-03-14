@@ -134,6 +134,10 @@ In progress:
 
 * Upcoming version of our scores backend
 
+.image why-golang/super-gopher.png 512 384
+
+* Upcoming version of our scores backend
+
 - replaces parts of our plain PHP application one after the other
 - reads incoming feeds from AMQP
 - parses the feeds and persists the data to our database
@@ -145,7 +149,10 @@ In progress:
 
 - we develop locally in virtual machines
 - compile binaries after running tests in Jenkins on every commit
-- during deployment the latest binary is fetched from there
+- binaries are uploaded to S3 after compiling successfully
+- we use Chef/OpsWorks recipes for deploying all our apps
+- during deployment the latest binary is fetched from S3
+- all the configuration files needed are added via the deploy recipe
 
 * Credits
 
