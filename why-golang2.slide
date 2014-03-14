@@ -22,7 +22,7 @@ I work as Software Architect in the backend team of motain GmbH.
 .image why-golang/tfa.png 80 306
 .image why-golang/tfa_large.jpg 370 800
 
-* THE Football App
+* THE Football App - Some Numbers
 
 - founded in 2008
 - 45 employees (and growing)
@@ -30,6 +30,7 @@ I work as Software Architect in the backend team of motain GmbH.
 - various platforms Android, iOS, Windows Phone, Asha, Samsung Smart TVs
 - covering 100+ leagues in 9 different languages (more to come)
 - features: live ticker, push notifications, statistics, news, videos, fan zone, match prediction
+- currently having about 200 million requests on a weekend day
 
 * Current challenges
 
@@ -91,6 +92,8 @@ Active deployments:
 
 - *EROS* -> high performance call cache
 
+- *terminator* -> Load testing tool
+
 - various other internal apps
 
 In progress:
@@ -131,6 +134,12 @@ In progress:
 - caches a minimum representation of objects from other services
 - keeps services independent from each other
 - uses groupcache and martini
+
+* terminator
+
+- used to load test services that need authentication
+- creates some user accounts
+- simulates user behaviour of our app users
 
 * Upcoming version of our scores backend
 
